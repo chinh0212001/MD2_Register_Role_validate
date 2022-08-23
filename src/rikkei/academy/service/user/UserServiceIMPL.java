@@ -38,4 +38,34 @@ public class UserServiceIMPL implements IUserService {
         }
         return false;
     }
+
+    @Override
+    public boolean checkLogin(String username, String password) {
+        for (int i = 0; i < userList.size(); i++) {
+            if (username.equals(userList.get(i).getUsername()) && password.equals(userList.get(i).getPassword())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        for (int i = 0; i < userList.size(); i++) {
+            if (username.equals(userList.get(i).getUsername())){
+                return userList.get(i);
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public User getCurrentUser() {
+        if (new Config<User>().readFile(Config.PAth_file2) != null) {
+            User user = new Config<User>().readFile(Config.PAth_file2).get(0);
+            return user;
+        }
+        return null;
+    }
+
 }

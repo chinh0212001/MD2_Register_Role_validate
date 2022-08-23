@@ -2,8 +2,6 @@ package rikkei.academy.service.role;
 
 import rikkei.academy.model.Role;
 import rikkei.academy.model.RoleName;
-import rikkei.academy.service.role.IRoleService;
-
 import java.util.ArrayList;
 import java.util.List;
 

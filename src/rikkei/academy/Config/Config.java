@@ -1,13 +1,11 @@
 package rikkei.academy.Config;
-
-import jdk.nashorn.internal.ir.GetSplitState;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public  class Config<T> {
+    public static String PAth_file2 = "C:\\Users\\Chinh\\IdeaProjects\\MD2_validate\\src\\rikkei\\academy\\database\\user.txt";
    public static Scanner scanner(){
         Scanner scanner = new Scanner(System.in);
         return scanner;
